@@ -6,14 +6,14 @@ Mae'r API yn gweithio dros HTTPS GET, felly gellir defnyddio unrhyw iaith/meddal
 
 ## Tiwtorialau
 
-Mae [Twitorial 1](demo1.md) yn enghraifft o sut i ddefnyddio'r API o fewn tudalen HTML gyda'r tag 'audio' HTML5
+Mae [Tiwtorial 1](demo1.md) yn enghraifft o sut i ddefnyddio'r API o fewn tudalen HTML gyda'r tag 'audio' HTML5.
 
 Mae [Tiwtorial 2](demo2.md) yn dangos sut y gellir llwytho ffeiliau mp3 o'r API i lawr er mwyn eu storio'n lleol.
 
 ## Fersiwn Cyfredol
 
-Mae un fersiwn o API Festival ar gael. v1 neu 'fersiwn 1'.
-Bydd yr URL yn newid gyda phob fersiwn newydd o'r API. Ar hyn o bryd, dylid defnyddio `/v1` ar gyfer fersiwn 1.
+Mae un fersiwn o API Festival ar gael: v1 neu 'fersiwn un'.
+Bydd yr URL yn newid gyda phob fersiwn newydd o'r API. Ar hyn o bryd, dylid defnyddio `/v1` ar gyfer fersiwn un.
 
 ## Schema
 
@@ -25,10 +25,10 @@ Mae cysylltiad â'r API yn gweithio dros HTTPS yn unig, gan ddefnyddio'r parth `
 |--------------|------------|----------|
 | `api_key`    | Eich allwedd API, ar gael o'r Canolfan APIs (https://api.techiaith.org) | angenrheidiol |
 | `text`       | Y testun i'w lleferu. Wedi'i fformatio yn ôl RFC 3986 yn ôl RFC 3986 (percent-encoded) | angenrheidiol |
-| `stretch`    | Rhif (float) rhwng 0 a 5 sy'n newid cyflymder y llais. Mae rhif <1 yn cyflymu'r llais, a rhif >1 yn arafu'r llais. Rhagosodiad: `1.2` | dewisiol |
-|  `pitch`     | Rhif (float) rhwng 1 a 9 sy'n newid traw y llais. Mae rhif isel yn rhoi traw isel, ac mae rhif uchel yn rhoi traw uchel. Rhagosodiad: `5` | dewisiol |
-| `format`     | Fformat y ffeil allbwn. Dewis rhwng `mp3` a `wav`. Rhagosodiad: `mp3` | optional |    
-| `lang`       | Yr iaith ar gyfer unrhyw destun fydd yn cael ei ddychwelyd (e.e. negeseuon gwall). Dewis o `en` neu `cy`. Rhagosodiad: `cy` | dewisiol |
+| `stretch`    | Rhif (float) rhwng 0 a 5 sy'n newid cyflymder y llais. Mae rhif <1 yn cyflymu'r llais, a rhif >1 yn arafu'r llais. Rhagosodiad: `1.2` | dewisol |
+|  `pitch`     | Rhif (float) rhwng 1 a 9 sy'n newid traw y llais. Mae rhif isel yn cynhyrchu traw isel, ac mae rhif uchel yn cynhyrchu traw uchel. Rhagosodiad: `5` | dewisol |
+| `format`     | Fformat y ffeil allbwn. Gallwch ddewis rhwng `mp3` a `wav`. Rhagosodiad: `mp3` | dewisol |    
+| `lang`       | Yr iaith ar gyfer unrhyw destun fydd yn cael ei ddychwelyd (e.e. negeseuon gwall). Dewis o `en` neu `cy`. Rhagosodiad: `cy` | dewisol |
 
 ### Enghraifft
 
@@ -40,9 +40,9 @@ allan.mp3: MPEG ADTS, layer III, v2,  56 kbps, 16 kHz, Monaural
 
 ## Cyfyngu nifer yr alwadau yr awr
 
-Mae gan yr API gyfyngiad ar nifer yr alwadau y gellir eu gwneud mewn awr.
+Mae gan yr API gyfyngiad ar y nifer o alwadau y gellir eu gwneud mewn awr.
 
-Mae'r cyfyngiad yn un haul iawn, ac rydym yn ystyried y bydd hyn yn ddigon i'r rhan fwyaf o ein defnyddwyr. Os ydych eisiau cynyddu nifer y galwadau at yr API sydd gennych, cysylltwch â ni.
+Mae'r cyfyngiad yn un hael iawn, ac rydym yn ystyried y bydd hyn yn ddigon ar gyfer y rhan fwyaf o'n defnyddwyr. Os ydych eisiau cynyddu nifer y galwadau at yr API sydd gennych, cysylltwch â ni.
 
 Gellir gweld cyfanswm nifer eich galwadau ar unrhyw adeg drwy edrych ar 'HTTP headers' yn eich galwad API:
 
@@ -68,7 +68,7 @@ Mae'r headers yn cynnwys yr holl wybodaeth sydd ei hangen:
 | X-RateLimit-Remaining | Y nifer o alwadau sydd gennych ar ôl yn y 'blwch' cyfyngu presennol |
 | X-RateLimit-Reset | Yr amser y bydd y 'blwch' cyfyngu presennol yn cael ei ail-osod, mewn [eiliadau epoch UTC](http://en.wikipedia.org/wiki/Unix_time) |
 
-Os oes arnoch angen yr amser mewn fformat gwahanol, gellir gwneud hyn gydag unrhyw iaith raglennu modern. Er engraifft, gellir gwneud hyn trwy gonsol eich porwr (gyda Javascript) a dychwelych gwrthrych 'Javascript Date'.
+Os oes arnoch angen yr amser mewn fformat gwahanol, gellir gwneud hyn gydag unrhyw iaith raglennu fodern. Er enghraifft, gellir gwneud hyn trwy gonsol eich porwr (gyda Javascript) a dychwelyd gwrthrych 'Javascript Date'.
 
 
 ```javascript
