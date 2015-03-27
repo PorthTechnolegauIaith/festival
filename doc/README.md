@@ -6,9 +6,9 @@ Mae'r API yn gweithio dros HTTPS GET, felly gellir defnyddio unrhyw iaith/meddal
 
 ## Tiwtorialau
 
-Mae [Twitorial 1](demo1.md) yn enghaifft o sut i ddefnyddio'r API o fewn tudalen HTML gyda'r tag 'audio' HTML5
+Mae [Twitorial 1](demo1.md) yn enghraifft o sut i ddefnyddio'r API o fewn tudalen HTML gyda'r tag 'audio' HTML5
 
-Mae [Tiwtorial 2](demo2.md) yn ddangos sut gellir lawrlwytho ffeiliau mp3 o'r API er mwyn eu storio'n lleol.
+Mae [Tiwtorial 2](demo2.md) yn dangos sut y gellir llwytho ffeiliau mp3 o'r API i lawr er mwyn eu storio'n lleol.
 
 ## Fersiwn Cyfredol
 
@@ -42,7 +42,7 @@ allan.mp3: MPEG ADTS, layer III, v2,  56 kbps, 16 kHz, Monaural
 
 Mae gan yr API gyfyngiad ar nifer yr alwadau y gellir eu gwneud mewn awr.
 
-Mae'r cyfyngiad yn un haul iawn, ac rydym yn ystyried bydd hyn yn ddigon i'r rhan fwyaf o ein defnyddwyr. Os ydych eisiau cynyddu nifer y galwadau at yr API sydd gennych, cysylltwch â ni.
+Mae'r cyfyngiad yn un haul iawn, ac rydym yn ystyried y bydd hyn yn ddigon i'r rhan fwyaf o ein defnyddwyr. Os ydych eisiau cynyddu nifer y galwadau at yr API sydd gennych, cysylltwch â ni.
 
 Gellir gweld cyfanswm nifer eich galwadau ar unrhyw adeg drwy edrych ar 'HTTP headers' yn eich galwad API:
 
@@ -60,7 +60,7 @@ X-RATELIMIT-RESET: 1418828048
 X-RATELIMIT-LIMIT: 300
 ```
 
-Mae'r headers yn cynnwys yr holl wybodaeth sydd ei angen:
+Mae'r headers yn cynnwys yr holl wybodaeth sydd ei hangen:
 
 | Enw'r Header | Disgrifiad |
 |--------------|------------|
@@ -68,15 +68,13 @@ Mae'r headers yn cynnwys yr holl wybodaeth sydd ei angen:
 | X-RateLimit-Remaining | Y nifer o alwadau sydd gennych ar ôl yn y 'blwch' cyfyngu presennol |
 | X-RateLimit-Reset | Yr amser y bydd y 'blwch' cyfyngu presennol yn cael ei ail-osod, mewn [eiliadau epoch UTC](http://en.wikipedia.org/wiki/Unix_time) |
 
-Os ydych chi angen yr amser mewn fformat gwahanol, gellir gwneud hyn gydag unrhyw iaith raglennu modern. Er engraifft, gellir gwneud hyn trwy gonsol eich porwr (gyda Javascript) a dychwelych gwrthrych 'Javascript Date'.
+Os oes arnoch angen yr amser mewn fformat gwahanol, gellir gwneud hyn gydag unrhyw iaith raglennu modern. Er engraifft, gellir gwneud hyn trwy gonsol eich porwr (gyda Javascript) a dychwelych gwrthrych 'Javascript Date'.
 
 
 ```javascript
 new Date(1416237399 * 1000)
 Date 2014-11-17T15:16:39.000Z
 ```
-
-Ar ôl i chi fynd dros eich nifer mwyaf o alwadau yr awr, byddwch yn derbyn gwall gan y gweinydd (403 Forbidden):
 
 Ar ôl i chi fynd dros eich nifer mwyaf o alwadau yr awr, byddwch yn derbyn gwall gan y gweinydd (403 Forbidden):
 
